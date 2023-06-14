@@ -7,9 +7,9 @@ const CONFIG = {
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'NearShare — Free and open source file sharing for Windows',
+  title: 'NearShare — Free and open-source file sharing for Windows and beyond',
   description:
-    'Free and open source implementation of the windows built-in nearby sharing feature (Project Rome).',
+    'Free and open-source implementation of the windows built-in nearby sharing feature (Project Rome).',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
