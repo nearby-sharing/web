@@ -1,0 +1,39 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import Steps2 from "~/components/widgets/Steps2.astro";
+
+const meta = {
+    title: "FAQs",
+};
+---
+
+<Layout {meta}>
+    <Steps2
+        items={[
+            {
+                title: `Enable "Bluetooth"`,
+                description: `Open <a class="text-accent" href="ms-settings:bluetooth">Bluetooth Settings</a>.<br/>
+            Enable "Bluetooth"; It's needed for (initial) connection.`,
+            },
+            {
+                title: `Enable "Nearby Sharing"`,
+                description: `Open <a class="text-accent" href="ms-settings:crossdevice">Settings</a>.<br/>
+            Enable "Nearby Sharing".<br/>
+            Allow to receive from "Everyone nearby".`,
+            },
+            {
+                title: `Set your home network to "Private"`,
+                description: `Open <a class="text-accent" href="ms-settings:network">Network Settings</a>.<br/>
+            Choose your current network.<br/>
+            Set it to "Private" to be able to receive via network (faster).`,
+            },
+        ]}
+        highlight="Setup"
+        title="Windows"
+        subtitle="Execute on your Windows machine"
+        callToAction={{
+            text: "Open settings",
+            href: "ms-settings:crossdevice",
+        }}
+    />
+</Layout>

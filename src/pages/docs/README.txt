@@ -1,0 +1,1 @@
+This folder is called "docs" for backwards compatibility with the old page urls

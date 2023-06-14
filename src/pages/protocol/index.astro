@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import Content from "~/components/widgets/Content.astro";
+import Hero from "~/components/widgets/Hero.astro";
+import { SITE } from "~/config.mjs";
+import Layout from "~/layouts/PageLayout.astro";
+
+const meta = {
+    title: SITE.title,
+    description: SITE.description,
+    dontUseTitleTemplate: true,
+};
+
+const pages = await Astro.glob("./*.md");
+---
+
+<Layout {meta}>
+    <Hero
+        title="Protocol"
+        subtitle="Documentation of the CDP and NearShare protocol"
+    />
+    <Content>
+        <Fragment slot="content">
+            <div class="flex flex-col">
+                {
+                    pages.map((page) => (
+                        <a
+                            class="text-blue-600 hover:underline dark:text-gray-200"
+                            href={page.url}
+                        >
+                            {page.frontmatter.title}
+                        </a>
+                    ))
+                }
+            </div>
+        </Fragment>
+    </Content>
+</Layout>

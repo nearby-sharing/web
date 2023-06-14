@@ -1,0 +1,21 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+import Hero2 from "~/components/widgets/Hero2.astro";
+
+const meta = {
+    title: "FAQs",
+};
+---
+
+<Layout {meta}>
+    <Hero2
+        title="Community"
+        subtitle="Get in touch / help"
+        callToAction={{
+            text: "Join Discord",
+            icon: "tabler:brand-discord",
+            href: "https://discord.gg/ArFA3Nymr2",
+        }}
+    />
+</Layout>

@@ -1,0 +1,30 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import CallToAction from "~/components/widgets/CallToAction.astro";
+
+const meta = {
+    title: "FAQs",
+};
+---
+
+<Layout {meta}>
+    <CallToAction
+        title="Android"
+        subtitle="Download the stable android app"
+        callToAction={{
+            text: "Google Play",
+            href: "https://play.google.com/store/apps/details?id=de.shortdev.nearby_sharing_windows",
+            icon: "fluent:arrow-download-24-regular",
+        }}
+    />
+
+    <CallToAction
+        title="Android (Preview)"
+        subtitle="Download the preview android app and start receiving!"
+        callToAction={{
+            text: "Google Play",
+            href: "https://play.google.com/apps/testing/de.shortdev.nearby_sharing_windows",
+            icon: "fluent:arrow-download-24-regular",
+        }}
+    />
+</Layout>

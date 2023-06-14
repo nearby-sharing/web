@@ -1,6 +1,5 @@
 ---
 import { AstroSeo } from '@astrolib/seo';
-import { GoogleAnalytics } from '@astrolib/analytics';
 import { getImage } from '@astrojs/image';
 
 import { SITE } from '~/config.mjs';
@@ -9,7 +8,6 @@ import { getCanonical, getAsset } from '~/utils/permalinks';
 import { getRelativeUrlByFilePath } from '~/utils/directories';
 
 import CustomStyles from '~/components/CustomStyles.astro';
-import SplitbeeAnalytics from './SplitbeeAnalytics.astro';
 
 export interface Props extends MetaSEO {
   dontUseTitleTemplate?: boolean;
@@ -84,15 +82,6 @@ const image =
 
 <CustomStyles />
 
-<!-- Google Site Verification -->
-{SITE.googleSiteVerificationId && <meta name="google-site-verification" content={SITE.googleSiteVerificationId} />}
-
-<!-- Google Analytics -->
-{SITE.googleAnalyticsId && <GoogleAnalytics id={String(SITE.googleAnalyticsId)} partytown={true} />}
-
-{SITE.splitbeeAnalytics?.enabled && <SplitbeeAnalytics {...SITE.splitbeeAnalytics} />}
-
-<link rel="shortcut icon" href={getAsset('/favicon.ico')} />
 <link rel="icon" type="image/svg+xml" href={getAsset('/favicon.svg')} />
 <link rel="mask-icon" href={getAsset('/favicon.svg')} color="#8D46E7" />
 <link rel="sitemap" href={getAsset('/sitemap-index.xml')} />

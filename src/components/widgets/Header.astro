@@ -26,7 +26,6 @@ export interface Props {
   actions?: Array<ActionLink>;
   isSticky?: boolean;
   showToggleTheme?: boolean;
-  showRssFeed?: boolean;
   position?: string;
 }
 
@@ -35,7 +34,6 @@ const {
   actions = [],
   isSticky = false,
   showToggleTheme = false,
-  showRssFeed = false,
   position = 'center',
 } = Astro.props;
 ---
@@ -100,17 +98,6 @@ const {
       <div class="hidden items-center md:flex">
         {showToggleTheme && <ToggleTheme iconClass="w-5 h-5" />}
 
-        {
-          showRssFeed && (
-            <a
-              class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-              aria-label="RSS Feed"
-              href={getAsset('/rss.xml')}
-            >
-              <Icon name="tabler:rss" class="w-5 h-5" />
-            </a>
-          )
-        }
         {
           actions?.length ? (
             <span class="ml-4">

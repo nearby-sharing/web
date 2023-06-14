@@ -1,0 +1,32 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+import Content from "~/components/widgets/Content.astro";
+import Hero from "~/components/widgets/Hero.astro";
+
+const meta = {
+    title: "FAQs",
+};
+---
+
+<Layout {meta}>
+    <Hero
+        callToAction={{
+            text: "PayPal",
+            href: "https://www.paypal.com/donate/?hosted_button_id=3NREDC9DBVFEG",
+            icon: "tabler:brand-paypal",
+        }}
+        callToAction2={{
+            text: "GitHub Sponsors",
+            href: "https://github.com/sponsors/ShortDevelopment",
+            icon: "tabler:brand-github",
+        }}
+    >
+        <Fragment slot="title">
+            Sponsor the development of this project
+        </Fragment>
+
+        <Fragment slot="subtitle">
+            I maintain this project in my freetime. It's completely (ad)-free!
+        </Fragment>
+    </Hero>
+</Layout>
