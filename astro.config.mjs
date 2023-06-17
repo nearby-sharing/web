@@ -67,4 +67,15 @@ export default defineConfig({
       },
     },
   },
+
+  experimental: {
+    redirects: true,
+  },
+  redirects: {
+    '/docs/FAQ': '/docs/faq',
+    '/docs/Privacy': '/privacy',
+    '/docs/discord': '/community',
+    '/docs/sponsor': '/sponsor',
+    '/CREDITS': 'https://github.com/nearby-sharing/android/blob/master/CREDITS.md'
+  }
 });

@@ -23,7 +23,7 @@ export const headerData = {
     },
     {
       text: 'Community',
-      href: '/docs/community',
+      href: '/community',
     },
     {
       text: 'Protocol',
@@ -31,14 +31,14 @@ export const headerData = {
     }
   ],
   actions: [
-    { type: 'ghost', text: 'Sponsor', href: '/docs/sponsor' },
+    { type: 'ghost', text: 'Sponsor', href: '/sponsor' },
     { type: 'button', text: 'Download', href: '/docs/download' },
   ]
 };
 
 export const footerData = {
   secondaryLinks: [
-    { text: 'Privacy Policy', href: '/docs/privacy' },
+    { text: 'Privacy Policy', href: '/privacy' },
   ],
   socialLinks: [
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/nearby-sharing' },
