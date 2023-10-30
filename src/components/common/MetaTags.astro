@@ -1,13 +1,13 @@
 ---
-import { AstroSeo } from '@astrolib/seo';
-import { getImage } from '@astrojs/image';
+import { AstroSeo } from "@astrolib/seo";
+import { getImage } from "astro:assets";
 
-import { SITE } from '~/config.mjs';
-import { MetaSEO } from '~/types';
-import { getCanonical, getAsset } from '~/utils/permalinks';
-import { getRelativeUrlByFilePath } from '~/utils/directories';
+import { SITE } from "~/config.mjs";
+import { MetaSEO } from "~/types";
+import { getCanonical, getAsset } from "~/utils/permalinks";
+import { getRelativeUrlByFilePath } from "~/utils/directories";
 
-import CustomStyles from '~/components/CustomStyles.astro';
+import CustomStyles from "~/components/CustomStyles.astro";
 
 export interface Props extends MetaSEO {
   dontUseTitleTemplate?: boolean;
@@ -17,16 +17,16 @@ const defaultImage = SITE.defaultImage
   ? (
       await getImage({
         src: SITE.defaultImage,
-        alt: 'Default image',
+        alt: "Default image",
         width: 1200,
         height: 628,
       })
     ).src
-  : '';
+  : "";
 
 const {
   title = SITE.name,
-  description = '',
+  description = "",
   image: _image = defaultImage,
 
   canonical = getCanonical(String(Astro.url.pathname)),
@@ -34,15 +34,15 @@ const {
   nofollow = false,
 
   ogTitle = title,
-  ogType = 'website',
+  ogType = "website",
 
   dontUseTitleTemplate = false,
 } = Astro.props;
 
 const image =
-  typeof _image === 'string'
+  typeof _image === "string"
     ? new URL(_image, Astro.site)
-    : _image && typeof _image['src'] !== 'undefined'
+    : _image && typeof _image["src"] !== "undefined"
     ? // @ts-ignore
       new URL(getRelativeUrlByFilePath(_image.src), Astro.site)
     : null;
@@ -53,7 +53,7 @@ const image =
 
 <AstroSeo
   title={title}
-  titleTemplate={dontUseTitleTemplate ? '%s' : `%s — ${SITE.name}`}
+  titleTemplate={dontUseTitleTemplate ? "%s" : `%s — ${SITE.name}`}
   description={description}
   canonical={String(canonical)}
   noindex={noindex}
@@ -76,14 +76,17 @@ const image =
   twitter={{
     // handle: '@handle',
     // site: '@site',
-    cardType: image ? 'summary_large_image' : undefined,
+    cardType: image ? "summary_large_image" : undefined,
   }}
 />
 
 <CustomStyles />
 
-<link rel="icon" type="image/svg+xml" href={getAsset('/favicon.svg')} />
-<link rel="mask-icon" href={getAsset('/favicon.svg')} color="#8D46E7" />
-<link rel="sitemap" href={getAsset('/sitemap-index.xml')} />
+<link rel="icon" type="image/svg+xml" href={getAsset("/favicon.svg")} />
+<link rel="mask-icon" href={getAsset("/favicon.svg")} color="#8D46E7" />
+<link rel="sitemap" href={getAsset("/sitemap-index.xml")} />
 
-<script defer data-domain="nearshare.shortdev.de" src="https://plausible.shortdev.de/js/script.js"></script>
+<script
+  defer
+  data-domain="nearshare.shortdev.de"
+  src="https://plausible.shortdev.de/js/script.js"></script>
