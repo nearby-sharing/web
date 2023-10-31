@@ -33,11 +33,11 @@ const meta = {
       [
         {
           question: "My transfer is slow",
-          answer: `In general bluetooth is slower than wifi, so try to always choose wifi if you can. Have a look at the <a href="/docs/setup" target="_blank">setup instructions</a>.`,
+          answer: `In general bluetooth is slower than wifi, so try to always choose wifi if you can. Have a look at the <a class="text-blue-600 hover:underline dark:text-gray-200" href="/docs/setup" target="_blank">setup instructions</a>.`,
         },
         {
           question: "My devices is not shown (via network)",
-          answer: `Follow the <a href="/setup" target="_blank">setup</a> on your PC to ensure all settings are correct!`,
+          answer: `Follow the <a class="text-blue-600 hover:underline dark:text-gray-200" href="/setup" target="_blank">setup</a> on your PC to ensure all settings are correct!`,
         },
       ],
     ]}
@@ -50,9 +50,14 @@ const meta = {
     items={[
       [
         {
-          question: "Can I receive in the background?",
+          question: "Can I receive in background?",
           answer:
             "No, that is currently not supported, but will come soon. You can already use a quick setting to open the app directly to the receive screen.",
+        },
+        {
+          question: "What about the MAC-Address?",
+          answer:
+            "Your phone advertises itself with it's MAC-Address in order for the sending device to be able to connect to your phone. Due to privacy reasons, there's no way to get this address programmatically. With the wrong address you won't be able to receive!",
         },
       ],
       [
@@ -60,6 +65,11 @@ const meta = {
           question: "My PC does not connect",
           answer:
             "I've your're using the YourPhone app from microsoft, you have to disconnect from your PC in the bluetooth settings on your phone until there's a fix for that.",
+        },
+        {
+          question: "`File already exists`",
+          answer:
+            "This is a known issue. Please rename the file on the sending device until there's a working solution.",
         },
       ],
     ]}
