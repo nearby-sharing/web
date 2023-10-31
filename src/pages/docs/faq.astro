@@ -17,29 +17,23 @@ const meta = {
         {
           question: "What can I share?",
           answer:
-            "You can share files and urls to any Windows 10 / 11 devices.",
+            "You can share files / urls or plain-text to any Windows 10 / 11 devices or android phone with this app installed.",
         },
         {
           question: "How can I share?",
           answer:
-            'You can use the "Send" button in the app to select a file or simple use the native sharing menu (e.g. from your gallery or browser).',
+            'You can use the "Send" button in the app to select a file or simple use the native android / windows sharing menu (e.g. from your gallery or browser).',
         },
         {
           question: "Can I send multiple files?",
           answer:
-            "Yes, you are able to select multiple files in your gallery / files app and use the android native sharing menu. From there you can select this app.",
+            "Yes, you are able to select multiple files in your gallery / files app or use the android native sharing menu. From there you can select this app.",
         },
       ],
       [
         {
-          question: 'My device is "not supported"',
-          answer:
-            'Ensure that you\'ve set your "near share" settings in windows to send and receive to / from "all devices".',
-        },
-        {
           question: "My transfer is slow",
-          answer:
-            "In general bluetooth is slower than wifi, so try to always choose wifi if you can.",
+          answer: `In general bluetooth is slower than wifi, so try to always choose wifi if you can. Have a look at the <a href="/docs/setup" target="_blank">setup instructions</a>.`,
         },
         {
           question: "My devices is not shown (via network)",
@@ -56,9 +50,16 @@ const meta = {
     items={[
       [
         {
+          question: "Can I receive in the background?",
+          answer:
+            "No, that is currently not supported, but will come soon. You can already use a quick setting to open the app directly to the receive screen.",
+        },
+      ],
+      [
+        {
           question: "My PC does not connect",
           answer:
-            "Please ensure that no devices are connected to your android device (See bluetooth settings)!",
+            "I've your're using the YourPhone app from microsoft, you have to disconnect from your PC in the bluetooth settings on your phone until there's a fix for that.",
         },
       ],
     ]}
