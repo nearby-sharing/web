@@ -1,30 +1,21 @@
 ---
 import Layout from "~/layouts/PageLayout.astro";
 import CallToAction from "~/components/widgets/CallToAction.astro";
+import Button from "~/components/widgets/Button.astro";
 
 const meta = {
-    title: "FAQs",
+  title: "FAQs",
 };
 ---
 
 <Layout {meta}>
-    <CallToAction
-        title="Android"
-        subtitle="Download the stable android app"
-        callToAction={{
-            text: "Google Play",
-            href: "https://play.google.com/store/apps/details?id=de.shortdev.nearby_sharing_windows",
-            icon: "fluent:arrow-download-24-regular",
-        }}
-    />
-
-    <CallToAction
-        title="Android (Preview)"
-        subtitle="Download the preview android app and start receiving!"
-        callToAction={{
-            text: "Google Play",
-            href: "https://play.google.com/apps/testing/de.shortdev.nearby_sharing_windows",
-            icon: "fluent:arrow-download-24-regular",
-        }}
-    />
+  <CallToAction title="Android" subtitle="Send and receive files on your phone">
+    <div slot="callToAction">
+      <div class="mt-6 flex flex-row gap-3 flex-wrap">
+        <Button text="Google Play" href="https://play.google.com/store/apps/details?id=de.shortdev.nearby_sharing_windows" icon="tabler:brand-google-play" />
+        <Button text="Google Play (Preview)" href="https://play.google.com/apps/testing/de.shortdev.nearby_sharing_windows" icon="tabler:brand-google-play" />
+        <Button text="GitHub" href="https://github.com/nearby-sharing/android/releases" icon="tabler:brand-github" />
+      </div>
+    </div>
+  </CallToAction>
 </Layout>
