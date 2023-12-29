@@ -42,6 +42,8 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/nearby-sharing' },
+    { ariaLabel: 'Mastodon', icon: 'tabler:brand-mastodon', href: 'https://mastodon.social/@shortdev/tagged/nearshare' },
+    { ariaLabel: 'Google Play', icon: 'tabler:brand-google-play', href: 'https://play.google.com/store/apps/details?id=de.shortdev.nearby_sharing_windows' }
   ],
   footNote: `
     Made with <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://github.com/onwidget/astrowind">AstroWind</a>.
