@@ -1,0 +1,29 @@
+Categories:
+  - Productivity
+License: GPL-3.0-only
+AuthorName: ShortDevelopment
+AuthorWebSite: https://shortdev.de
+WebSite: https://nearshare.shortdev.de/
+SourceCode: https://github.com/nearby-sharing/android
+IssueTracker: https://github.com/nearby-sharing/android/issues
+Changelog: https://github.com/nearby-sharing/android/releases
+Donate: https://nearshare.shortdev.de/sponsor/
+
+Name: Nearby Sharing
+Summary: Share files and websites between nearby Windows and Android devices
+Description: >-
+  This app allows you to use the Windows 10 / 11 built in "Nearby Sharing" feature from your Android device.
+  You can send and receive files, links or plain-text via the native android / windows sharing menu.
+
+  If you have questions visit the FAQ
+  https://nearshare.shortdev.de/docs/FAQ
+
+  Community Discord
+  https://discord.gg/ArFA3Nymr2
+
+  This app is open-source and I'm happy about any contributions!
+  https://github.com/nearby-sharing/android
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersionCode: 2147483647
