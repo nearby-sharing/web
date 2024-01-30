@@ -3,11 +3,14 @@ title: "Enable logging"
 layout: ~/layouts/MarkdownLayout.astro
 ---
 
+## Windows
+Windows 10 / 11 has the Connected-Devices-Platform build-in:
+
 Service: `CDPSvc`   
 Settings directory: `%LOCALAPPDATA%\ConnectedDevicesPlatform\`    
 Settings directory: `C:\Windows\ServiceProfiles\LocalService\AppData\Local\ConnectedDevicesPlatform`    
 
-## Enable Logging
+### Enable Logging
  1. Create `.\CDPGlobalSettings.cdp.override` with this content:
 ```json
 {
@@ -21,7 +24,7 @@ Get-Service *cdp* | Restart-Service
 ```
  3. See output at `.\CDPTraces.log`   
 
-## Trace via pipe
+### Trace via pipe
 ```
 \\\\.\\pipe\\CDPInOut
 ```

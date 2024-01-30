@@ -26,8 +26,18 @@ export const headerData = {
       href: '/community',
     },
     {
-      text: 'Protocol',
-      href: '/protocol',
+      text: 'Technical',
+      href: '/technical',
+      links: [
+        {
+          text: 'Technical',
+          href: '/technical'
+        },
+        {
+          text: "Logging",
+          href: "/technical/logging"
+        }
+      ]
     }
   ],
   actions: [
