@@ -3,6 +3,11 @@ title: "Enable logging"
 layout: ~/layouts/MarkdownLayout.astro
 ---
 
+## Android
+Logging is currently enabled by default.
+
+The logs can be found in `Internal Storage` > `Android/media/de.shortdev.nearby_sharing_windows/logs`
+
 ## Windows
 Windows 10 / 11 has the Connected-Devices-Platform build-in:
 
