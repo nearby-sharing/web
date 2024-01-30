@@ -1,13 +1,27 @@
 ---
-import '@fontsource/inter/variable.css';
+import { AstroFont } from "astro-font";
 
 // Nunito
 // Dosis
 ---
 
+<AstroFont
+  config={[
+    {
+      src: [],
+      preload: false,
+      display: "swap",
+      name: "InterVariable",
+      fallback: "sans-serif",
+      cssVariable: "aw-font-sans",
+      googleFontsURL:
+        "https://fonts.googleapis.com/css2?family=Inter:wght@100..900",
+    },
+  ]}
+/>
+
 <style is:inline is:global>
   :root {
-    --aw-font-sans: 'InterVariable';
     --aw-font-serif: var(--aw-font-sans);
     --aw-font-heading: var(--aw-font-sans);
 
