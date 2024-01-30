@@ -17,7 +17,7 @@ const meta = {
         {
           question: "What can I share?",
           answer:
-            "You can share files / urls or plain-text to any Windows 10 / 11 devices or android phone with this app installed.",
+            "You can share files, urls and plain-text to any Windows 10 / 11 devices or an android phone with this app installed.",
         },
         {
           question: "How can I share?",
@@ -33,7 +33,7 @@ const meta = {
       [
         {
           question: "My transfer is slow",
-          answer: `In general bluetooth is slower than wifi, so try to always choose wifi if you can. Have a look at the <a class="text-blue-600 hover:underline dark:text-gray-200" href="/docs/setup" target="_blank">setup instructions</a>.`,
+          answer: `The App uses bluetooth to establish a session and tries to upgrade to a faster transport (i.e. WiFi) if possible. Have a look at the <a class="text-blue-600 hover:underline dark:text-gray-200" href="/docs/setup" target="_blank">setup instructions</a> to ensure a transport-upgrade is possible.`,
         },
         {
           question: "My devices is not shown (via network)",
@@ -57,19 +57,14 @@ const meta = {
         {
           question: "What about the MAC-Address?",
           answer:
-            "Your phone advertises itself with it's MAC-Address in order for the sending device to be able to connect to your phone. Due to privacy reasons, there's no way to get this address programmatically. With the wrong address you won't be able to receive!",
+            "Your phone advertises itself with it's MAC-Address in order for the sending device to be able to connect to your phone. Due to privacy reasons, there's no way to get this address programmatically. With the wrong address you won't be able to receive but your phone will still be discovered!",
         },
       ],
       [
         {
-          question: "My PC does not connect",
+          question: "My Phone is discovered but no notification",
           answer:
-            "I've your're using the YourPhone app from microsoft, you have to disconnect from your PC in the bluetooth settings on your phone until there's a fix for that.",
-        },
-        {
-          question: "`File already exists`",
-          answer:
-            "This is a known issue. Please rename the file on the sending device until there's a working solution.",
+            "If your're using the YourPhone app from microsoft, you have to disconnect the bluetooth connection to your PC in settings as it interferes with the nearby-sharing app.",
         },
       ],
     ]}
