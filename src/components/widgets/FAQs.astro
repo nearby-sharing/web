@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 
 interface Item {
   question: string;
@@ -14,14 +14,14 @@ export interface Props {
 }
 
 const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
+  title = await Astro.slots.render("title"),
+  subtitle = await Astro.slots.render("subtitle"),
   highlight,
   items = [],
 } = Astro.props;
 ---
 
-<div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+<article class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
   <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
     {
       (title || subtitle || highlight) && (
@@ -38,7 +38,12 @@ const {
               set:html={title}
             />
           )}
-          {subtitle && <p class="max-w-3xl mx-auto text-xl text-muted dark:text-slate-400" set:html={subtitle} />}
+          {subtitle && (
+            <p
+              class="max-w-3xl mx-auto text-xl text-muted dark:text-slate-400"
+              set:html={subtitle}
+            />
+          )}
         </div>
       )
     }
@@ -50,17 +55,33 @@ const {
           items.map((subitems) => (
             <div class="space-y-8">
               {subitems.map(({ question, answer }) => (
-                <div>
+                <section
+                  itemprop="mainEntity"
+                  itemscope
+                  itemtype="http://schema.org/Question"
+                >
                   <h3 class="mb-4 text-xl font-bold">
-                    <Icon name="tabler:arrow-down-right" class="w-7 h-7 text-primary inline-block" />
-                    {question}
+                    <Icon
+                      name="tabler:arrow-down-right"
+                      class="w-7 h-7 text-primary inline-block"
+                    />
+                    <span itemprop="name">{question}</span>
                   </h3>
-                  {answer && <div class="text-muted dark:text-gray-400" set:html={answer} />}
-                </div>
+                  {answer && (
+                    <div
+                      itemscope
+                      itemprop="acceptedAnswer"
+                      itemtype="https://schema.org/Answer"
+                      class="text-muted dark:text-gray-400"
+                    >
+                      <span itemprop="text" set:html={answer} />
+                    </div>
+                  )}
+                </section>
               ))}
             </div>
           ))
       }
     </div>
   </div>
-</div>
+</article>
