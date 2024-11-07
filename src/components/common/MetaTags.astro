@@ -3,7 +3,7 @@ import { AstroSeo } from "@astrolib/seo";
 import { getImage } from "astro:assets";
 
 import { SITE } from "~/config.mjs";
-import { MetaSEO } from "~/types";
+import { type MetaSEO } from "~/types";
 import { getCanonical, getAsset } from "~/utils/permalinks";
 import { getRelativeUrlByFilePath } from "~/utils/directories";
 
@@ -43,9 +43,9 @@ const image =
   typeof _image === "string"
     ? new URL(_image, Astro.site)
     : _image && typeof _image["src"] !== "undefined"
-    ? // @ts-ignore
-      new URL(getRelativeUrlByFilePath(_image.src), Astro.site)
-    : null;
+      ? // @ts-ignore
+        new URL(getRelativeUrlByFilePath(_image.src), Astro.site)
+      : null;
 ---
 
 <meta charset="UTF-8" />
@@ -89,4 +89,5 @@ const image =
 <script
   defer
   data-domain="nearshare.shortdev.de"
-  src="https://plausible.shortdev.de/js/script.js"></script>
+  src="https://plausible.shortdev.de/js/script.outbound-links.tagged-events.js"
+></script>

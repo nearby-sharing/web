@@ -1,17 +1,19 @@
 ---
 import { Icon } from "astro-icon/components";
+import { formatEvent } from "~/utils/plausible";
 
 export interface Props {
   text: string;
   href: string;
   icon?: string;
+  plausibleEvent?: string;
 }
 
-const { href, icon, text } = Astro.props;
+const { href, icon, text, plausibleEvent } = Astro.props;
 ---
 
 <a
-  class="btn btn-primary w-full sm:w-auto"
+  class={`btn btn-primary w-full sm:w-auto ${formatEvent(plausibleEvent)}`}
   href={href}
   target="_blank"
   rel="noopener"
