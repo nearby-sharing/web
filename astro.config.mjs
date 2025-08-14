@@ -54,6 +54,8 @@ export default defineConfig({
     '/docs/Privacy': '/privacy',
     '/docs/discord': '/community',
     '/docs/sponsor': '/sponsor',
+    '/docs/download': '/download',
+    '/docs/setup': '/setup',
     '/CREDITS': 'https://github.com/nearby-sharing/android/blob/master/CREDITS.md'
   }
 });
