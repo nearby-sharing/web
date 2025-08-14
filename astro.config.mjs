@@ -4,18 +4,14 @@ import { fileURLToPath } from 'url';
 import { defineConfig } from 'astro/config';
 
 import icon from "astro-icon";
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from "@tailwindcss/vite";
 import sitemap from '@astrojs/sitemap';
-import partytown from '@astrojs/partytown';
 import compress from 'astro-compress';
 import { readingTimeRemarkPlugin } from './src/utils/frontmatter.mjs';
 
 import { SITE } from './src/config.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const whenExternalScripts = (items = []) =>
-  SITE.googleAnalyticsId ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
   site: SITE.origin,
@@ -29,29 +25,16 @@ export default defineConfig({
   },
 
   integrations: [
-    tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
-    }),
     sitemap(),
 
-    ...whenExternalScripts(() =>
-      partytown({
-        config: { forward: ['dataLayer.push'] },
-      })
-    ),
-
     compress({
-      css: true,
-      html: {
-        removeAttributeQuotes: false,
-      },
-      img: false,
-      js: true,
-      svg: false,
+      CSS: true,
+      HTML: true,
+      Image: false,
+      JavaScript: true,
+      SVG: false,
 
-      logger: 1,
+      Logger: 1,
     }),
     icon()
   ],
@@ -62,6 +45,7 @@ export default defineConfig({
         '~': path.resolve(__dirname, './src'),
       },
     },
+    plugins: [tailwindcss()]
   },
 
   redirects: {

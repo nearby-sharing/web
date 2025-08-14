@@ -21,7 +21,6 @@ pnpm-debug.log*
 
 # !! Commit this file for astro deploy action !!
 # package-lock.json
-pnpm-lock.yaml
 
 .astro
 .vs

@@ -7,8 +7,6 @@ import { type MetaSEO } from "~/types";
 import { getCanonical, getAsset } from "~/utils/permalinks";
 import { getRelativeUrlByFilePath } from "~/utils/directories";
 
-import CustomStyles from "~/components/CustomStyles.astro";
-
 export interface Props extends MetaSEO {
   dontUseTitleTemplate?: boolean;
 }
@@ -79,8 +77,6 @@ const image =
     cardType: image ? "summary_large_image" : undefined,
   }}
 />
-
-<CustomStyles />
 
 <link rel="icon" type="image/svg+xml" href={getAsset("/favicon.svg")} />
 <link rel="mask-icon" href={getAsset("/favicon.svg")} color="#8D46E7" />
