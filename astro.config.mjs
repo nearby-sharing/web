@@ -49,7 +49,8 @@ export default defineConfig({
   },
 
   redirects: {
-    '/docs/FAQ': '/docs/faq',
+    '/docs/FAQ': '/faq',
+    '/docs/faq': '/faq',
     '/docs/Privacy': '/privacy',
     '/docs/discord': '/community',
     '/docs/sponsor': '/sponsor',

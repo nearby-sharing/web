@@ -9,15 +9,15 @@ export const headerData = {
       links: [
         {
           text: 'Setup',
-          href: '/docs/setup',
+          href: '/setup',
         },
         {
           text: 'Download',
-          href: '/docs/download',
+          href: '/download',
         },
         {
           text: 'FAQ',
-          href: '/docs/faq',
+          href: '/faq',
         },
       ]
     },
@@ -42,7 +42,7 @@ export const headerData = {
   ],
   actions: [
     { type: 'ghost', text: 'Sponsor', href: '/sponsor' },
-    { type: 'button', text: 'Download', href: '/docs/download' },
+    { type: 'button', text: 'Download', href: '/download' },
   ]
 };
 
