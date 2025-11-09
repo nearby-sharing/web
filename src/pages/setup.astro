@@ -1,44 +1,101 @@
 ---
 import Layout from "~/layouts/PageLayout.astro";
 import Steps2 from "~/components/widgets/Steps2.astro";
+import Steps from "~/components/widgets/Steps.astro";
+import Hero from "~/components/widgets/Hero.astro";
 
 const meta = {
-    title: "Setup",
+  title: "Setup your Windows machine",
+  subtitle: "Execute on your Windows machine",
 };
 ---
 
 <Layout {meta}>
-    <Steps2
-        items={[
-            {
-                title: `Enable "Bluetooth"`,
-                description: `Open <a class="text-accent" href="ms-settings:bluetooth">Bluetooth Settings</a>.<br/>
-            Enable "Bluetooth"; It's needed for (initial) connection.`,
-            },
-            {
-                title: `Enable "Nearby Sharing"`,
-                description: `Open <a class="text-accent" href="ms-settings:crossdevice">Settings</a>.<br/>
+  <Hero
+    title="Setup"
+    callToAction={{
+      icon: "fluent:settings-24-regular",
+      text: "Open settings",
+      href: "ms-settings:crossdevice",
+    }}
+  >
+    <Fragment slot="subtitle">
+      Follow these steps to enable nearby sharing on your <b>Windows machine</b
+      >.
+    </Fragment>
+  </Hero>
+  <Steps
+    title="Setup your Windows machine"
+    hugeMargin={false}
+    items={[
+      {
+        icon: "fluent:bluetooth-24-regular",
+        title: `Enable "Bluetooth"`,
+        description: `Open <a class="text-accent" href="ms-settings:bluetooth">Bluetooth Settings</a>.<br/>
+            Enable "Bluetooth"<br/> It's needed for (initial) connection.`,
+      },
+      {
+        icon: "fluent:share-24-regular",
+        title: `Enable "Nearby Sharing"`,
+        description: `Open <a class="text-accent" href="ms-settings:crossdevice">Settings</a>.<br/>
             Enable "Nearby Sharing".<br/>
             Allow to receive from "Everyone nearby".`,
-            },
-            {
-                title: `Set your home network to "Private"`,
-                description: `Open <a class="text-accent" href="ms-settings:network">Network Settings</a>.<br/>
+      },
+      {
+        icon: "fluent:comment-24-regular",
+        title: `Enable Notifications`,
+        description: `NearShare on Windows sends you notifications to accept transfers.<br/>
+                Enable them in <a class="text-accent" href="ms-settings:notifications">Notification Settings</a>.`,
+      },
+      {
+        icon: "fluent:checkmark-24-regular",
+        title: `Ready`,
+      },
+    ]}
+  />
+  <Steps
+    title="Enable fast transfers over network (optional)"
+    hugeMargin={false}
+    items={[
+      {
+        icon: "fluent:wifi-1-24-regular",
+        title: `Establish network connection`,
+        description: `Open <a class="text-accent" href="ms-settings:network-wifi">WiFi Settings</a>.<br/>
+            Enable "WiFi" (Ethernet is fine too).`,
+      },
+      {
+        icon: "fluent:home-24-regular",
+        title: `Set your home network to "Private"`,
+        description: `Open <a class="text-accent" href="ms-settings:network">Network Settings</a>.<br/>
             Choose your current network.<br/>
             Set it to "Private" to be able to receive via network (faster).`,
-            },
-            {
-                title: `Enable Notifications`,
-                description: `NearShare on Windows sends you notifications to accept transfers.<br/>
-                Enable them in <a class="text-accent" href="ms-settings:notifications">Notification Settings</a>.`,
-            },
-        ]}
-        highlight="Setup"
-        title="Windows"
-        subtitle="Execute on your Windows machine"
-        callToAction={{
-            text: "Open settings",
-            href: "ms-settings:crossdevice",
-        }}
-    />
+      },
+      {
+        icon: "fluent:globe-24-regular",
+        title: `Enable "File and Printer Sharing"`,
+        description: `Open <a class="text-accent" href="ms-settings:network-advancedsharing">Advanced Sharing Settings</a>.<br/>
+                Under "Private" enable "File and Printer Sharing".`,
+      },
+      {
+        icon: "fluent:checkmark-24-regular",
+        title: `Ready`,
+      },
+    ]}
+  />
+  <Steps
+    title="Troubleshooting Network Issues"
+    hugeMargin={false}
+    items={[
+      {
+        icon: "fluent:arrow-reset-24-filled",
+        title: `Reset Firewall rules`,
+        description: `Open <a class="text-accent" href="windowsdefender://network/">Defender Firewall</a>.<br/>
+            Click on "Restore defaults" to reset all rules.`,
+      },
+      {
+        icon: "fluent:checkmark-24-regular",
+        title: `Ready`,
+      },
+    ]}
+  />
 </Layout>
