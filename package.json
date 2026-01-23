@@ -12,29 +12,29 @@
     "lint:eslint": "eslint . --ext .js,.ts,.astro"
   },
   "devDependencies": {
-    "@astrojs/rss": "^4.0.12",
-    "@astrojs/sitemap": "^3.4.2",
-    "@astrolib/seo": "^1.0.0-beta.8",
-    "@tailwindcss/typography": "^0.5.16",
-    "astro": "^5.12.9",
-    "astro-compress": "^2.3.8",
+    "@astrojs/rss": "^4.0.15",
+    "@astrojs/sitemap": "^3.7.0",
+    "@astrolib/seo": "1.0.0-beta.8",
+    "@tailwindcss/typography": "^0.5.19",
+    "astro": "^5.16.15",
+    "astro-compress": "^2.3.9",
     "astro-icon": "^1.1.5",
     "limax": "4.1.0",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
-    "sharp": "^0.34.3",
+    "sharp": "^0.34.5",
     "svgo": "4.0.0",
-    "tailwindcss": "^4.1.11",
-    "typescript": "^5.9.2"
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=16.12.0"
   },
   "dependencies": {
-    "@fontsource-variable/inter": "^5.2.6",
-    "@iconify-json/fluent": "^1.2.28",
-    "@iconify-json/tabler": "^1.2.22",
-    "@tailwindcss/vite": "^4.1.11"
+    "@fontsource-variable/inter": "^5.2.8",
+    "@iconify-json/fluent": "^1.2.37",
+    "@iconify-json/tabler": "^1.2.26",
+    "@tailwindcss/vite": "^4.1.18"
   },
-  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748"
+  "packageManager": "pnpm@10.28.1+sha512.7d7dbbca9e99447b7c3bf7a73286afaaf6be99251eb9498baefa7d406892f67b879adb3a1d7e687fc4ccc1a388c7175fbaae567a26ab44d1067b54fcb0d6a316"
 }
