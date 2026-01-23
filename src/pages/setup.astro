@@ -31,15 +31,21 @@ const meta = {
       {
         icon: "fluent:bluetooth-24-regular",
         title: `Enable "Bluetooth"`,
-        description: `Open <a class="text-accent" href="ms-settings:bluetooth">Bluetooth Settings</a>.<br/>
-            Enable "Bluetooth"<br/> It's needed for (initial) connection.`,
+        description: `Bluetooth is needed for the initial connection.
+            <ol class="list-inside list-decimal">
+              <li>Open <a class="text-accent" href="ms-settings:bluetooth">Bluetooth Settings</a></li>
+              <li>Enable "Bluetooth"</li>
+            </ol>`,
       },
       {
         icon: "fluent:share-24-regular",
         title: `Enable "Nearby Sharing"`,
-        description: `Open <a class="text-accent" href="ms-settings:crossdevice">Settings</a>.<br/>
-            Enable "Nearby Sharing".<br/>
-            Allow to receive from "Everyone nearby".`,
+        description: `
+            <ol class="list-inside list-decimal">
+              <li>Open <a class="text-accent" href="ms-settings:crossdevice">Settings</a></li>
+              <li>Enable "Nearby Sharing"</li>
+              <li>Allow to receive from "Everyone nearby"</li>
+            </ol>`,
       },
       {
         icon: "fluent:comment-24-regular",
@@ -83,14 +89,24 @@ const meta = {
     ]}
   />
   <Steps
-    title="Troubleshooting Network Issues"
+    title="Troubleshooting"
     hugeMargin={false}
     items={[
       {
+        icon: "fluent:apps-24-regular",
+        title: "Apply registry patch",
+        description: `Newer versions of Windows limit the number of messages a single device can send (throttling). <br/>
+            This prevents larger transfers from completing as each message may only contain a view kilobytes of data.<br/>
+            Until Microsoft provides a fix, you can apply <a class="text-accent" href="/patches/max-messages-per-endpoint.reg" download>this registry patch</a>.`,
+      },
+      {
         icon: "fluent:arrow-reset-24-filled",
         title: `Reset Firewall rules`,
-        description: `Open <a class="text-accent" href="windowsdefender://network/">Defender Firewall</a>.<br/>
-            Click on "Restore defaults" to reset all rules.`,
+        description: `If the previous step did not work, you can try to reset the Firewall rules:
+            <ol class="list-inside list-decimal">
+              <li>Open <a class="text-accent" href="windowsdefender://network/">Defender Firewall</a></li>
+              <li>Click on "Restore defaults" to reset all rules.</li>
+            </ol>`,
       },
       {
         icon: "fluent:checkmark-24-regular",
