@@ -97,14 +97,14 @@ const meta = {
         title: "Apply registry patch",
         description: `Newer versions of Windows limit the number of messages a single device can send (throttling). <br/>
             This prevents larger transfers from completing as each message may only contain a view kilobytes of data.<br/>
-            Until Microsoft provides a fix, you can apply <a class="text-accent" href="/patches/max-messages-per-endpoint.reg" download>this registry patch</a>.`,
+            Until Microsoft provides a fix, you can apply <a class="text-accent plausible-event-name=max-messages-fix" href="/patches/max-messages-per-endpoint.reg" download>this registry patch</a>.`,
       },
       {
         icon: "fluent:arrow-reset-24-filled",
         title: `Reset Firewall rules`,
         description: `If the previous step did not work, you can try to reset the Firewall rules:
             <ol class="list-inside list-decimal">
-              <li>Open <a class="text-accent" href="windowsdefender://network/">Defender Firewall</a></li>
+              <li>Open <a class="text-accent plausible-event-name=reset-firewall" href="windowsdefender://network/">Defender Firewall</a></li>
               <li>Click on "Restore defaults" to reset all rules.</li>
             </ol>`,
       },
