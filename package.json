@@ -12,29 +12,30 @@
     "lint:eslint": "eslint . --ext .js,.ts,.astro"
   },
   "devDependencies": {
-    "@astrojs/rss": "^4.0.15",
-    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.5",
     "@astrolib/seo": "1.0.0-beta.8",
-    "@tailwindcss/typography": "^0.5.19",
-    "astro": "^5.16.15",
-    "astro-compress": "^2.3.9",
-    "astro-icon": "^1.1.5",
-    "limax": "4.1.0",
+    "@tailwindcss/typography": "^0.5.20",
+    "astro": "^7.4.12",
+    "astro-compress": "^2.4.3",
+    "astro-icon": "^1.2.0",
+    "limax": "4.2.3",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
-    "sharp": "^0.34.5",
-    "svgo": "4.0.0",
-    "tailwindcss": "^4.1.18",
-    "typescript": "^5.9.3"
+    "sharp": "^0.35.5",
+    "svgo": "4.1.0",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3"
   },
   "engines": {
     "node": ">=16.12.0"
   },
   "dependencies": {
-    "@fontsource-variable/inter": "^5.2.8",
-    "@iconify-json/fluent": "^1.2.37",
-    "@iconify-json/tabler": "^1.2.26",
-    "@tailwindcss/vite": "^4.1.18"
+    "@astrojs/markdown-remark": "^7.3.9",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@iconify-json/fluent": "^1.2.62",
+    "@iconify-json/tabler": "^1.2.46",
+    "@tailwindcss/vite": "^4.3.5"
   },
   "packageManager": "pnpm@10.28.1+sha512.7d7dbbca9e99447b7c3bf7a73286afaaf6be99251eb9498baefa7d406892f67b879adb3a1d7e687fc4ccc1a388c7175fbaae567a26ab44d1067b54fcb0d6a316"
 }
