@@ -1,0 +1,16 @@
+---
+interface Props{
+    name: string;
+}
+
+const {name} = Astro.props;
+---
+
+<a name={name} />
+
+<style scoped>
+    a {
+        visibility: collapse;
+        scroll-padding-top: 72px;
+    }
+</style>

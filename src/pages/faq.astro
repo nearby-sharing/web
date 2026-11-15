@@ -1,6 +1,7 @@
 ---
 import Layout from "~/layouts/PageLayout.astro";
 import FAQs from "~/components/widgets/FAQs.astro";
+import ScrollAnchor from "~/components/ScrollAnchor.astro";
 
 const meta = {
   title: "FAQs",
@@ -8,6 +9,9 @@ const meta = {
 ---
 
 <Layout {meta} itemtype="http://schema.org/FAQPage">
+
+  <ScrollAnchor name="send" />
+
   <FAQs
     highlight="FAQs"
     title="Sending"
@@ -43,6 +47,8 @@ const meta = {
     ]}
   />
 
+  <ScrollAnchor name="receive" />
+
   <FAQs
     highlight="FAQs"
     title="Receiving"
@@ -69,6 +75,8 @@ const meta = {
       ],
     ]}
   />
+
+  <ScrollAnchor name="technical" />
 
   <FAQs
     highlight="FAQs"
